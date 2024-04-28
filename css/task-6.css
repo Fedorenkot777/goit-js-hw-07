@@ -1,0 +1,69 @@
+#controls {
+    width: 466px;
+    padding: 32px 10px;
+    background-color: #f6f6fe;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+#controls button {
+    width: 120px;
+    height: 40px;
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    color: white;
+}
+
+#controls button:nth-child(2) {
+    background-color: #4e75ff;
+}
+
+#controls button:nth-child(2):hover {
+    background-color: #6c8cff;
+}
+
+#controls button:nth-child(3) {
+    background-color: #ff4e4e;
+}
+
+#controls button:nth-child(3):hover {
+    background-color: #ff7070;
+}
+
+#controls input {
+    width: 140px;
+    height: 40px;
+    color: #2e2f42;
+    font-family: Montserrat;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #808080;
+}
+
+#boxes {
+    max-width: 1200px;
+    min-width: 466px;
+    padding: 32px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    gap: 44px;
+    margin-top: 16px;
+    justify-content: center;
+    margin: 16px auto;
+    background-color: #f6f6fe;
+}
