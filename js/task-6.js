@@ -8,28 +8,32 @@ const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const boxesContainer = document.getElementById('boxes');
 
-createBtn.addEventListener('click', () => {
-  const amount = parseInt(input.value);
-  if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
-    input.value = '';
-  } else {
-    alert('Please enter a number between 1 and 100');
-  }
-});
-destroyBtn.addEventListener('click',() => {destroyBoxes(); });
+
 function createBoxes(amount) {
-    let size = 30;
+  boxesContainer.innerHTML = '';
+  const array = [];
   for (let i = 0; i < amount; i++) {
+    const size = 30 + i * 10;
     const box = document.createElement('div');
+    box.classList.add("box");
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxesContainer.appendChild(box);
-    size += 10;
+    array.push(box);
+  }
+  boxes.append(...array);
+};
+
+createBtn.addEventListener('click', handleClick);
+ function handleClick() {
+  const amount = input.value;
+  if (amount >= 1 && amount <= 100) {
+    createBoxes(amount);
+    input.value = '';
   }
 }
 
+destroyBtn.addEventListener('click', destroyBoxes);
 function destroyBoxes() {
   boxesContainer.innerHTML = '';
 }
